@@ -10,8 +10,8 @@
     <style>
         body { 
             font-family: 'Lora', serif; 
-            background-color: #fcf9f2; 
-            color: #3e2723; 
+            background-color: #FDFAF0; /* Vàng sáng cực nhạt - Màu nền chính */
+            color: #4A3022; /* Nâu trầm gỗ */
             scroll-behavior: smooth;
         }
         h1, h2, h3, .font-playfair { 
@@ -22,25 +22,29 @@
             from { opacity: 0; transform: translateY(20px); } 
             to { opacity: 1; transform: translateY(0); } 
         }
-        /* Style riêng cho tiếng Anh để tạo sự phân biệt tinh tế */
+        /* Style cho tiếng Anh */
         .eng-text {
-            color: #8B5A2B;
-            opacity: 0.85;
+            color: #B58300; /* Vàng nghệ đậm */
+            opacity: 0.9;
             font-style: italic;
             font-size: 0.95em;
             margin-top: 0.25rem;
         }
+        /* Nhấn mạnh sắc vàng Hội An */
+        .hoi-an-yellow { background-color: #E6A100; }
+        .hoi-an-yellow-text { color: #E6A100; }
+        .bg-section-alt { background-color: #F8EED1; } /* Vàng pastel ấm */
     </style>
 </head>
 <body class="antialiased">
 
     <section class="min-h-screen flex flex-col items-center justify-center text-center px-6 fade-in">
-        <h1 class="text-5xl md:text-6xl lg:text-7xl mb-6 text-[#3e2723] leading-tight">
+        <h1 class="text-5xl md:text-6xl lg:text-7xl mb-6 text-[#4A3022] leading-tight">
             Hội An says hello,<br>and your heart whispers, ‘Oh!’
         </h1>
         <div class="max-w-3xl mb-10 space-y-4">
             <p class="text-lg md:text-xl text-[#5c4033] leading-relaxed">
-                Cơ hội tiếp quản và vận hành tổ hợp 4 căn nhà nhỏ mang linh hồn của Đất, Nước, Lửa, Gió.<br>
+                Cơ hội tiếp quản và vận hành Ồ Villa - tổ hợp 4 căn nhà nhỏ mang linh hồn của Đất, Nước, Lửa, Gió.<br>
                 <span class="font-medium">Nơi trao gởi an yên - những tâm hồn đồng điệu.</span>
             </p>
             <p class="eng-text text-base md:text-lg">
@@ -48,16 +52,16 @@
                 A place to entrust peace - for kindred spirits.
             </p>
         </div>
-        <a href="#contact" class="px-8 py-4 bg-[#8B5A2B] text-white rounded-full hover:bg-[#6b4421] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-lg flex flex-col items-center">
-            <span>Nhận thông tin thuê tổ hợp</span>
-            <span class="text-sm opacity-80 italic font-light font-sans mt-0.5">Get leasing information</span>
+        <a href="#contact" class="px-8 py-4 hoi-an-yellow text-white rounded-full hover:bg-[#c98d00] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-lg flex flex-col items-center">
+            <span class="font-medium tracking-wide">Nhận thông tin thuê tổ hợp</span>
+            <span class="text-sm opacity-90 italic font-light font-sans mt-0.5">Get leasing information</span>
         </a>
     </section>
 
     <section class="py-24 px-6 max-w-5xl mx-auto text-center fade-in">
-        <div class="w-16 h-1 bg-[#d2b48c] mx-auto mb-8"></div>
-        <h2 class="text-3xl md:text-4xl mb-2">Tìm Thấy Mình – Tại Ồ!</h2>
-        <h3 class="text-xl text-[#8B5A2B] italic mb-10 font-playfair">Find Yourself – At Ồ!</h3>
+        <div class="w-16 h-1 hoi-an-yellow mx-auto mb-8"></div>
+        <h2 class="text-3xl md:text-4xl mb-2 text-[#4A3022]">Tìm Thấy Mình – Tại Ồ!</h2>
+        <h3 class="text-xl hoi-an-yellow-text italic mb-10 font-playfair">Find Yourself – At Ồ!</h3>
         
         <div class="space-y-6 text-[#5c4033] leading-loose">
             <p class="text-lg md:text-xl">
@@ -69,35 +73,47 @@
         </div>
     </section>
 
-    <section class="py-24 px-6 bg-[#f5ebd9]">
+    <section class="py-24 px-6 bg-section-alt">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl mb-2">Tổ hợp 4 căn nhà: Đất, Nước, Lửa, Gió</h2>
-                <h3 class="text-xl text-[#8B5A2B] italic font-playfair">Complex of 4 houses: Earth, Water, Fire, Wind</h3>
+                <h2 class="text-3xl md:text-4xl mb-2 text-[#4A3022]">Tổ hợp 4 căn nhà: Đất, Nước, Lửa, Gió</h2>
+                <h3 class="text-xl hoi-an-yellow-text italic font-playfair">Complex of 4 houses: Earth, Water, Fire, Wind</h3>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-[#fcf9f2] p-10 border border-[#d2b48c] text-center hover:shadow-lg transition-shadow duration-300">
-                    <h3 class="text-3xl mb-1 text-[#8B5A2B]">Nhà Đất</h3>
-                    <p class="text-sm italic text-[#a07855] mb-4">Earth House</p>
+                <div class="bg-[#FDFAF0] p-10 border border-[#e6c173] rounded-sm text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <svg class="w-12 h-12 mx-auto hoi-an-yellow-text mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+                    </svg>
+                    <h3 class="text-3xl mb-1 text-[#4A3022]">Nhà Đất</h3>
+                    <p class="text-sm italic text-[#B58300] mb-4">Earth House</p>
                     <p class="text-[#5c4033] leading-relaxed mb-2">Ấm áp, vững chãi, nơi mọi muộn phiền được ôm ấp. Hoàn thiện 100%, nội thất may đo riêng biệt.</p>
                     <p class="eng-text text-sm">Warm, sturdy, where all worries are embraced. 100% completed, custom-made furniture.</p>
                 </div>
-                <div class="bg-[#fcf9f2] p-10 border border-[#d2b48c] text-center hover:shadow-lg transition-shadow duration-300">
-                    <h3 class="text-3xl mb-1 text-[#8B5A2B]">Nhà Nước</h3>
-                    <p class="text-sm italic text-[#a07855] mb-4">Water House</p>
+                <div class="bg-[#FDFAF0] p-10 border border-[#e6c173] rounded-sm text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <svg class="w-12 h-12 mx-auto hoi-an-yellow-text mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 2.25c-3.16 3.16-7.5 7.74-7.5 12a7.5 7.5 0 1015 0c0-4.26-4.34-8.84-7.5-12z" />
+                    </svg>
+                    <h3 class="text-3xl mb-1 text-[#4A3022]">Nhà Nước</h3>
+                    <p class="text-sm italic text-[#B58300] mb-4">Water House</p>
                     <p class="text-[#5c4033] leading-relaxed mb-2">Mềm mại, uyển chuyển, mang lại sự thanh lọc cho tâm hồn. Đầy đủ tiện nghi, sẵn sàng vận hành ngay.</p>
                     <p class="eng-text text-sm">Soft, graceful, bringing purification to the soul. Fully equipped, ready to operate.</p>
                 </div>
-                <div class="bg-[#fcf9f2] p-10 border border-[#d2b48c] text-center hover:shadow-lg transition-shadow duration-300">
-                    <h3 class="text-3xl mb-1 text-[#8B5A2B]">Nhà Lửa</h3>
-                    <p class="text-sm italic text-[#a07855] mb-4">Fire House</p>
+                <div class="bg-[#FDFAF0] p-10 border border-[#e6c173] rounded-sm text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <svg class="w-12 h-12 mx-auto hoi-an-yellow-text mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.601 8.983 8.983 0 0112 3c-1.23 2.1-2.1 4.54-1.23 7.04.87 2.5 3.32 3.16 4.59 1.17z" />
+                    </svg>
+                    <h3 class="text-3xl mb-1 text-[#4A3022]">Nhà Lửa</h3>
+                    <p class="text-sm italic text-[#B58300] mb-4">Fire House</p>
                     <p class="text-[#5c4033] leading-relaxed mb-2">Nhiệt huyết, ấm cúng, không gian của sự gắn kết gia đình. Không gian chung rộng rãi, bếp tiện nghi.</p>
                     <p class="eng-text text-sm">Passionate, cozy, a space for family bonding. Spacious common area, well-equipped kitchen.</p>
                 </div>
-                <div class="bg-[#fcf9f2] p-10 border border-[#d2b48c] text-center hover:shadow-lg transition-shadow duration-300">
-                    <h3 class="text-3xl mb-1 text-[#8B5A2B]">Nhà Gió</h3>
-                    <p class="text-sm italic text-[#a07855] mb-4">Wind House</p>
+                <div class="bg-[#FDFAF0] p-10 border border-[#e6c173] rounded-sm text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <svg class="w-12 h-12 mx-auto hoi-an-yellow-text mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                    </svg>
+                    <h3 class="text-3xl mb-1 text-[#4A3022]">Nhà Gió</h3>
+                    <p class="text-sm italic text-[#B58300] mb-4">Wind House</p>
                     <p class="text-[#5c4033] leading-relaxed mb-2">Thoáng đãng, tự do, nơi lắng nghe hơi thở của thiên nhiên. Giao hòa với khoảng xanh, đón ánh sáng.</p>
                     <p class="eng-text text-sm">Airy, free, where you listen to nature's breath. Harmonizing with green spaces, welcoming the light.</p>
                 </div>
@@ -107,12 +123,12 @@
 
     <section class="py-24 px-6 max-w-6xl mx-auto">
         <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl mb-2">Đủ gần để chạm, đủ xa để yên</h2>
-            <h3 class="text-xl text-[#8B5A2B] italic font-playfair">Close enough to touch, far enough to be peaceful</h3>
+            <h2 class="text-3xl md:text-4xl mb-2 text-[#4A3022]">Đủ gần để chạm, đủ xa để yên</h2>
+            <h3 class="text-xl hoi-an-yellow-text italic font-playfair">Close enough to touch, far enough to be peaceful</h3>
         </div>
 
         <div class="flex flex-col lg:flex-row gap-12 items-center">
-            <div class="lg:w-1/2 space-y-6">
+            <div class="lg:w-5/12 space-y-6">
                 <p class="text-lg md:text-xl leading-loose text-[#5c4033] text-justify md:text-left">
                     An trú tại một làng quê yên ả. Ồ chỉ cách Phố Cổ Hội An khoảng 10 phút di chuyển – một khoảng cách khá vừa vặn, đủ gần để hòa vào nhịp sống di sản và cũng đủ xa để tĩnh lặng ở vùng ngoại ô xanh biếc.
                 </p>
@@ -121,34 +137,34 @@
                 </p>
             </div>
             
-            <div class="lg:w-1/2 bg-white p-8 border border-[#d2b48c] rounded-sm shadow-sm w-full">
+            <div class="lg:w-7/12 bg-white p-8 border border-[#e6c173] rounded-sm shadow-sm w-full">
                 <ul class="space-y-6 text-[#5c4033]">
                     <li class="flex items-start">
-                        <span class="text-[#8B5A2B] mr-4 text-xl">✦</span> 
+                        <span class="hoi-an-yellow-text mr-4 text-xl">✦</span> 
                         <div>
-                            <p class="text-lg">Ngắm sông Hoài lặng trôi, qua Chùa Cầu buổi tối</p>
-                            <p class="eng-text text-sm mt-1">Watch the Hoai River drift, cross the Japanese Bridge at night</p>
+                            <p class="text-lg font-medium">Phố cổ Hội An, di tích Chùa Cầu & dòng sông Hoài thơ mộng</p>
+                            <p class="eng-text text-sm mt-1">Hoi An Ancient Town, the historic Japanese Bridge & the romantic Hoai River</p>
                         </div>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-[#8B5A2B] mr-4 text-xl">✦</span> 
+                        <span class="hoi-an-yellow-text mr-4 text-xl">✦</span> 
                         <div>
-                            <p class="text-lg">Đón bình minh tuyệt vời tại biển An Bàng</p>
-                            <p class="eng-text text-sm mt-1">Welcome a wonderful sunrise at An Bang Beach</p>
+                            <p class="text-lg font-medium">Biển An Bàng – Bãi biển hoang sơ đón bình minh tuyệt mỹ</p>
+                            <p class="eng-text text-sm mt-1">An Bang Beach – A pristine beach to welcome the perfect sunrise</p>
                         </div>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-[#8B5A2B] mr-4 text-xl">✦</span> 
+                        <span class="hoi-an-yellow-text mr-4 text-xl">✦</span> 
                         <div>
-                            <p class="text-lg">Xuyên rừng dừa Cẩm Thanh, về làng gốm Thanh Hà</p>
-                            <p class="eng-text text-sm mt-1">Through Cam Thanh coconut forest, to Thanh Ha pottery village</p>
+                            <p class="text-lg font-medium">Rừng dừa Bảy Mẫu Cẩm Thanh & Làng gốm Thanh Hà truyền thống</p>
+                            <p class="eng-text text-sm mt-1">Cam Thanh Water Coconut Forest & the traditional Thanh Ha Pottery Village</p>
                         </div>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-[#8B5A2B] mr-4 text-xl">✦</span> 
+                        <span class="hoi-an-yellow-text mr-4 text-xl">✦</span> 
                         <div>
-                            <p class="text-lg">Ghé thăm làng rau Trà Quế, làng mộc Kim Bồng</p>
-                            <p class="eng-text text-sm mt-1">Visit Tra Que vegetable village, Kim Bong carpentry village</p>
+                            <p class="text-lg font-medium">Làng rau sinh thái Trà Quế & Làng mộc Kim Bồng tài hoa</p>
+                            <p class="eng-text text-sm mt-1">Tra Que Ecological Vegetable Village & the artisanal Kim Bong Carpentry Village</p>
                         </div>
                     </li>
                 </ul>
@@ -156,15 +172,15 @@
         </div>
     </section>
 
-    <section class="py-24 px-6 bg-[#f5ebd9] text-center border-y border-[#e6d5b8]">
+    <section class="py-24 px-6 bg-section-alt text-center border-y border-[#e6c173]">
         <div class="max-w-2xl mx-auto">
-            <h2 class="text-3xl md:text-4xl mb-2">Lắng nghe âm thanh của Ồ...</h2>
-            <h3 class="text-xl text-[#8B5A2B] italic font-playfair mb-6">Listen to the sound of Ồ...</h3>
+            <h2 class="text-3xl md:text-4xl mb-2 text-[#4A3022]">Lắng nghe âm thanh của Ồ...</h2>
+            <h3 class="text-xl hoi-an-yellow-text italic font-playfair mb-6">Listen to the sound of Ồ...</h3>
             
             <audio id="ohVillaSong" src="ohvillasong.mp3"></audio>
 
             <div class="flex flex-col items-center justify-center space-y-4 my-10">
-                <button id="playBtn" class="w-24 h-24 bg-[#8B5A2B] text-white rounded-full flex items-center justify-center hover:bg-[#6b4421] transition-all duration-300 shadow-xl hover:scale-105">
+                <button id="playBtn" class="w-24 h-24 hoi-an-yellow text-white rounded-full flex items-center justify-center hover:bg-[#c98d00] transition-all duration-300 shadow-xl hover:scale-105">
                     <svg id="playIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 translate-x-1">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347c-.75.412-1.667-.13-1.667-.986V5.653z" />
                     </svg>
@@ -173,58 +189,52 @@
                     </svg>
                 </button>
                 <div class="mt-4">
-                    <p class="text-sm italic text-[#8B5A2B]">Chạm để phát nhạc</p>
+                    <p class="text-sm italic hoi-an-yellow-text font-medium">Chạm để phát nhạc</p>
                     <p class="eng-text text-xs mt-0">Tap to play music</p>
                 </div>
             </div>
 
-            <div class="mt-16 space-y-12 text-lg md:text-xl text-[#3e2723] font-playfair">
-                
+            <div class="mt-16 space-y-12 text-lg md:text-xl text-[#4A3022] font-playfair">
                 <div>
                     <p class="leading-loose mb-3">Hội An says hello, and your heart whispers, ‘Oh!’<br>Homestay Ồ! Welcomes you like home<br>Đến Hội An – phố cổ<br>Mời mình về với Ồ<br>Pha son la si đô<br>Khi thấy đời xô bồ<br>Mình lại về với Ồ<br>Khi lên chức làm bố<br>Đưa cả nhà về Ồ<br>Như chim bay về tổ.</p>
                     <p class="eng-text leading-loose">Come to Hội An – ancient town,<br>Welcome to Homestay Ồ.<br>Pha son la si đô,<br>When life feels crowded and loud,<br>We return again to Ồ.<br>On the day I became a dad,<br>I brought my family to Ồ,<br>Like a bird back to its nest.</p>
                 </div>
-
                 <div>
                     <p class="leading-loose mb-3">Cùng nhau đi bách bộ<br>Ngắm sông Hoài lặng trôi<br>Qua Chùa Cầu buổi tối<br>Đèn lồng sáng muôn nơi<br>Lòng thấy vui phơi phới<br>Thả hoa đăng sáng ngời<br>Ới tô cao lầu xơi<br>Bài chòi mình lại chơi</p>
                     <p class="eng-text leading-loose">Together we stroll the streets,<br>Watching the Hoài River drift,<br>Crossing the Japanese Bridge at night,<br>Lanterns shining everywhere.<br>Our hearts feel light and bright,<br>Floating lanterns on the stream,<br>A bowl of Cao Lầu to enjoy,<br>Playing Bài Chòi with laughter.</p>
                 </div>
-
                 <div>
                     <p class="leading-loose mb-3">Rồi về Ồ nghỉ ngơi<br>Sáng ra biển đi bơi<br>An Bàng biển gọi mời<br>Đón bình minh tuyệt vời.</p>
                     <p class="eng-text leading-loose">Then back to Ồ for rest,<br>Morning calls us to the sea,<br>An Bàng Beach, sunrise shines.</p>
                 </div>
-
                 <div>
                     <p class="leading-loose mb-3">Qua rừng dừa Cẩm Thanh<br>Về làng gốm - Thanh Hà<br>Qua Trà Quế, làng rau<br>Kim Bồng là làng mộc<br>Bao làng nghề truyền thống<br>Xây nét đẹp Hội An</p>
                     <p class="eng-text leading-loose">Through the coconut groves of Cẩm Thanh,<br>To Thanh Hà, making pottery,<br>At Trà Quế, the vegetable village,<br>Kim Bồng – the carpenters’ home.<br>Traditional villages remain,<br>Building Hội An’s timeless charm.</p>
                 </div>
-
                 <div>
                     <p class="leading-loose mb-3">Và Hội An, có Ồ!<br>Khi mình bước chân vô<br>Ồ - như phút chợt ngộ<br>Giữa dòng đời xô bồ<br>Tìm thấy mình – tại Ồ!</p>
                     <p class="eng-text leading-loose">And in Hội An, there is Ồ!<br>When we step inside the door,<br>Ồ – like a sudden awakening,<br>Amid the bustle of the world,<br>We find ourselves – at Ồ!</p>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-24 px-6 bg-[#3e2723] text-[#fcf9f2] text-center">
-        <h2 class="text-3xl md:text-4xl mb-2">Trở thành người viết tiếp câu chuyện của Ồ</h2>
-        <h3 class="text-lg text-[#d2b48c] italic font-playfair mb-8">Become the one to write the next chapter of Ồ</h3>
+    <section id="contact" class="py-24 px-6 bg-[#4A3022] text-[#FDFAF0] text-center">
+        <h2 class="text-3xl md:text-4xl mb-2 text-[#FDFAF0]">Trở thành người viết tiếp câu chuyện của Ồ</h2>
+        <h3 class="text-lg hoi-an-yellow-text italic font-playfair mb-8">Become the one to write the next chapter of Ồ</h3>
         
         <div class="mb-10 space-y-2">
             <p class="text-lg opacity-90 max-w-lg mx-auto">Bạn đến thăm nhà hãy gọi cho Trà nhé. Cánh cửa của Ồ luôn mở rộng chờ đón. Trân quý và biết ơn!</p>
-            <p class="eng-text text-[#d2b48c] max-w-lg mx-auto">When you visit, please call Trà. Ồ's doors are always open to welcome you. Deeply appreciate and grateful!</p>
+            <p class="eng-text text-[#E6A100] max-w-lg mx-auto opacity-70">When you visit, please call Trà. Ồ's doors are always open to welcome you. Deeply appreciate and grateful!</p>
         </div>
         
-        <div class="inline-block border-2 border-[#8B5A2B] bg-[#4a3028] py-6 px-10 rounded-sm mb-16 shadow-lg">
+        <div class="inline-block border-2 border-[#E6A100] bg-[#3e271a] py-6 px-10 rounded-sm mb-16 shadow-xl">
             <p class="text-4xl font-playfair tracking-wider">0706.019.039 <span class="text-2xl opacity-80 font-serif italic ml-2">(Trà)</span></p>
         </div>
         
-        <div class="border-t border-[#5c4033] pt-8 mt-8 space-y-1">
-            <p class="text-sm opacity-60">© 2026 Ồ Villa Hội An. Nơi trao gởi an yên - những tâm hồn đồng điệu.</p>
-            <p class="eng-text text-xs text-[#d2b48c] opacity-50">A place to entrust peace - for kindred spirits.</p>
+        <div class="border-t border-[#6b4735] pt-8 mt-8 space-y-1">
+            <p class="text-sm opacity-70">© 2026 Ồ Villa Hội An. Nơi trao gởi an yên - những tâm hồn đồng điệu.</p>
+            <p class="eng-text text-xs text-[#E6A100] opacity-50">A place to entrust peace - for kindred spirits.</p>
         </div>
     </section>
 
