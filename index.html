@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cơ hội tiếp quản và vận hành Ồ Villa - tổ hợp 4 căn nhà nhỏ mang linh hồn của Đất, Nước, Lửa, Gió tại Hội An. A peaceful haven for kindred spirits.">
     <title>Ồ Villa - Tìm Bạn Đồng Hành | Find A Companion</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
@@ -36,39 +37,51 @@
 </head>
 <body class="antialiased">
 
-    <!-- Hero Section -->
-    <section class="min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 fade-in">
-        <h1 class="text-5xl md:text-6xl lg:text-7xl mb-6 text-[#4A3022] leading-tight mt-10">
-            Hội An says hello,<br>and your heart whispers, ‘Oh!’
-        </h1>
-        <div class="max-w-3xl mb-10 space-y-4">
-            <p class="text-lg md:text-xl text-[#5c4033] leading-relaxed">
-                Cơ hội tiếp quản và vận hành Ồ Villa - tổ hợp 4 căn nhà nhỏ mang linh hồn của Đất, Nước, Lửa, Gió.<br>
-                <span class="font-medium">Nơi trao gởi an yên - những tâm hồn đồng điệu.</span>
-            </p>
-            <p class="eng-text text-base md:text-lg">
-                An opportunity to take over and operate a complex of 4 beautiful houses embodying the souls of Earth, Water, Fire, and Air<br>
-                A place to entrust peace - for kindred spirits.
-            </p>
-        </div>
-        <a href="#contact" class="px-8 py-4 hoi-an-yellow text-white rounded-full hover:bg-[#c98d00] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-lg flex flex-col items-center">
-            <span class="font-medium tracking-wide">Nhận thông tin thuê tổ hợp</span>
-            <span class="text-sm opacity-90 italic font-light font-sans mt-0.5">Get leasing information</span>
-        </a>
+    <!-- Hero Section với Background Video -->
+    <section class="relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden fade-in">
+        
+        <!-- HTML5 Video Tag -->
+        <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+            <source src="video.mp4" type="video/mp4">
+        </video>
+        
+        <!-- Lớp phủ màu để đảm bảo chữ vẫn dễ đọc trên nền video -->
+        <div class="absolute inset-0 bg-[#FDFAF0] bg-opacity-70 z-0"></div>
 
-        <!-- Image Gallery -->
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mt-16 w-full max-w-7xl mx-auto">
-            <div class="overflow-hidden rounded-md shadow-md group">
-                <img src="1.jpg" alt="Hoàng hôn tại Ồ Villa" class="w-full h-48 md:h-72 lg:h-80 object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out">
+        <!-- Nội dung Hero Section -->
+        <div class="relative z-10 flex flex-col items-center w-full max-w-7xl mx-auto mt-10">
+            <h1 class="text-5xl md:text-6xl lg:text-7xl mb-6 text-[#4A3022] leading-tight">
+                Hội An says hello,<br>and your heart whispers, ‘Oh!’
+            </h1>
+            <div class="max-w-3xl mb-10 space-y-4">
+                <p class="text-lg md:text-xl text-[#5c4033] leading-relaxed">
+                    Cơ hội tiếp quản và vận hành Ồ Villa - tổ hợp 4 căn nhà nhỏ mang linh hồn của Đất, Nước, Lửa, Gió.<br>
+                    <span class="font-medium">Nơi trao gởi an yên - những tâm hồn đồng điệu.</span>
+                </p>
+                <p class="eng-text text-base md:text-lg">
+                    An opportunity to take over and operate a complex of 4 beautiful houses embodying the souls of Earth, Water, Fire, and Air<br>
+                    A place to entrust peace - for kindred spirits.
+                </p>
             </div>
-            <div class="overflow-hidden rounded-md shadow-md group">
-                <img src="2.jpg" alt="Góc nội thất tại Ồ Villa" class="w-full h-48 md:h-72 lg:h-80 object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out">
-            </div>
-            <div class="overflow-hidden rounded-md shadow-md group">
-                <img src="3.jpg" alt="Cổng chào Ồ Villa" class="w-full h-48 md:h-72 lg:h-80 object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out">
-            </div>
-            <div class="overflow-hidden rounded-md shadow-md group">
-                <img src="4.jpg" alt="Khung cửa sổ Ồ Villa" class="w-full h-48 md:h-72 lg:h-80 object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out">
+            <a href="#contact" class="px-8 py-4 hoi-an-yellow text-white rounded-full hover:bg-[#c98d00] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-lg flex flex-col items-center">
+                <span class="font-medium tracking-wide">Nhận thông tin thuê tổ hợp</span>
+                <span class="text-sm opacity-90 italic font-light font-sans mt-0.5">Get leasing information</span>
+            </a>
+
+            <!-- Image Gallery -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mt-16 w-full">
+                <div class="overflow-hidden rounded-md shadow-md group">
+                    <img src="1.jpg" alt="Hoàng hôn tại Ồ Villa" class="w-full h-48 md:h-72 lg:h-80 object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                </div>
+                <div class="overflow-hidden rounded-md shadow-md group">
+                    <img src="2.jpg" alt="Góc nội thất tại Ồ Villa" class="w-full h-48 md:h-72 lg:h-80 object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                </div>
+                <div class="overflow-hidden rounded-md shadow-md group">
+                    <img src="3.jpg" alt="Cổng chào Ồ Villa" class="w-full h-48 md:h-72 lg:h-80 object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                </div>
+                <div class="overflow-hidden rounded-md shadow-md group">
+                    <img src="4.jpg" alt="Khung cửa sổ Ồ Villa" class="w-full h-48 md:h-72 lg:h-80 object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                </div>
             </div>
         </div>
     </section>
@@ -211,10 +224,10 @@
             <h2 class="text-3xl md:text-4xl mb-2 text-[#4A3022]">Lắng nghe âm thanh của Ồ...</h2>
             <h3 class="text-xl hoi-an-yellow-text italic font-playfair mb-6">Listen to the sound of Ồ...</h3>
             
-            <audio id="ohVillaSong" src="ohvillasong.mp3"></audio>
+            <audio id="ohVillaSong" src="ohvillasong.mp3" loop></audio>
 
             <div class="flex flex-col items-center justify-center space-y-4 my-10">
-                <button id="playBtn" class="w-24 h-24 hoi-an-yellow text-white rounded-full flex items-center justify-center hover:bg-[#c98d00] transition-all duration-300 shadow-xl hover:scale-105">
+                <button id="playBtn" aria-label="Play background music" class="w-24 h-24 hoi-an-yellow text-white rounded-full flex items-center justify-center hover:bg-[#c98d00] transition-all duration-300 shadow-xl hover:scale-105">
                     <svg id="playIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 translate-x-1">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347c-.75.412-1.667-.13-1.667-.986V5.653z" />
                     </svg>
