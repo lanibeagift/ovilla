@@ -33,10 +33,23 @@
         .hoi-an-yellow { background-color: #E6A100; }
         .hoi-an-yellow-text { color: #E6A100; }
         .bg-section-alt { background-color: #F8EED1; }
+        
+        /* Modal & Slider CSS */
+        .modal-active { display: flex !important; }
+        .modal-content-show { transform: scale(1) !important; opacity: 1 !important; }
+        body.modal-open { overflow: hidden; }
+
+        .slide { display: none; animation: fadeSlide 0.5s ease-in-out; }
+        .slide.active { display: block; }
+        @keyframes fadeSlide {
+            from { opacity: 0.4; }
+            to { opacity: 1; }
+        }
     </style>
 </head>
 <body class="antialiased">
 
+    <!-- HERO SECTION -->
     <section class="min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 fade-in">
         <h1 class="text-5xl md:text-6xl lg:text-7xl mb-6 text-[#4A3022] leading-tight mt-10">
             Hội An says hello,<br>and your heart whispers, ‘Ồ!’
@@ -67,190 +80,291 @@
         </a>
 
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mt-16 w-full max-w-7xl mx-auto">
-            <div class="overflow-hidden rounded-md shadow-md group">
-                <img src="1.jpg" alt="Hoàng hôn tại Ồ Villa" class="w-full h-48 md:h-72 lg:h-80 object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out">
-            </div>
-            <div class="overflow-hidden rounded-md shadow-md group">
-                <img src="2.jpg" alt="Góc nội thất tại Ồ Villa" class="w-full h-48 md:h-72 lg:h-80 object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out">
-            </div>
-            <div class="overflow-hidden rounded-md shadow-md group">
-                <img src="3.jpg" alt="Cổng chào Ồ Villa" class="w-full h-48 md:h-72 lg:h-80 object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out">
-            </div>
-            <div class="overflow-hidden rounded-md shadow-md group">
-                <img src="4.jpg" alt="Khung cửa sổ Ồ Villa" class="w-full h-48 md:h-72 lg:h-80 object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out">
-            </div>
+            <div class="overflow-hidden rounded-md shadow-md group"><img src="1.jpg" alt="Hoàng hôn tại Ồ Villa" class="w-full h-48 md:h-72 lg:h-80 object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out"></div>
+            <div class="overflow-hidden rounded-md shadow-md group"><img src="2.jpg" alt="Góc nội thất tại Ồ Villa" class="w-full h-48 md:h-72 lg:h-80 object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out"></div>
+            <div class="overflow-hidden rounded-md shadow-md group"><img src="3.jpg" alt="Cổng chào Ồ Villa" class="w-full h-48 md:h-72 lg:h-80 object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out"></div>
+            <div class="overflow-hidden rounded-md shadow-md group"><img src="4.jpg" alt="Khung cửa sổ Ồ Villa" class="w-full h-48 md:h-72 lg:h-80 object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out"></div>
         </div>
     </section>
 
+    <!-- INTRO SECTION -->
     <section class="py-24 px-6 max-w-5xl mx-auto text-center fade-in">
         <div class="w-16 h-1 hoi-an-yellow mx-auto mb-8"></div>
         <h2 class="text-3xl md:text-4xl mb-2 text-[#4A3022] uppercase tracking-wide">[ Tìm Bạn Đồng Hành ] 🌿</h2>
         <h3 class="text-xl hoi-an-yellow-text italic mb-10 font-playfair">[ Seeking A Companion ] 🌿</h3>
-        
         <div class="space-y-8 text-[#5c4033] leading-loose text-justify md:text-center">
             <div>
-                <p class="text-lg md:text-xl mb-2">
-                    <span class="font-bold">Ồ VILLA</span> – một nơi chốn bình yên bên cánh đồng lúa tươi xanh thơm mát, nơi mà ĐẤT, NƯỚC, LỬA, GIÓ giao hòa để tạo nên một không gian sống an lành. Tình yêu của chúng mình đã được trao trọn ở nơi đây, từ khi thai nghén rồi tự do phóng tác lên ý tưởng cho đến lúc thực thi và dựng xây nên nơi chốn bình yên này.
-                </p>
-                <p class="eng-text text-base md:text-lg">
-                    <span class="font-bold">Ồ VILLA</span> – a peaceful haven beside fresh green rice fields, where EARTH, WATER, FIRE, and AIR harmonize to create a serene living space. Our love has been fully devoted here, from its inception and free-spirited ideation to the execution and building of this peaceful place.
-                </p>
+                <p class="text-lg md:text-xl mb-2"><span class="font-bold">Ồ VILLA</span> – một nơi chốn bình yên bên cánh đồng lúa tươi xanh thơm mát, nơi mà ĐẤT, NƯỚC, LỬA, GIÓ giao hòa để tạo nên một không gian sống an lành.</p>
+                <p class="eng-text text-base md:text-lg"><span class="font-bold">Ồ VILLA</span> – a peaceful haven beside fresh green rice fields, where EARTH, WATER, FIRE, and AIR harmonize to create a serene living space.</p>
+            </div>
+            <div>
+                <p class="text-lg md:text-xl mb-2">Đây thật sự là một món quà được chúng mình tự tay làm nên và gói ghém một cách đẹp đẽ để dành riêng cho bạn...</p>
+                <p class="eng-text text-base md:text-lg">This is truly a hand-crafted gift, beautifully packaged just for you...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4 HOUSES CARDS -->
+    <section class="py-24 px-6 bg-section-alt border-t border-[#e6c173]">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl md:text-3xl text-[#4A3022] font-playfair italic">Chạm vào từng không gian để khám phá</h2>
+                <p class="eng-text">Touch each space to explore</p>
             </div>
             
-            <div>
-                <p class="text-lg md:text-xl mb-2">
-                    Đây thật sự là một món quà được chúng mình tự tay làm nên và gói ghém một cách đẹp đẽ để dành riêng cho bạn, người yêu cái mộc mạc của làng quê Việt, người yêu nét đẹp và kiến trúc Phố Cổ, người yêu sự ôn hòa của con người ở nơi đây.
-                </p>
-                <p class="eng-text text-base md:text-lg">
-                    This is truly a hand-crafted gift, beautifully packaged just for you—those who love the rustic charm of Vietnamese villages, the beauty and architecture of the Ancient Town, and the gentle nature of its people.
-                </p>
-            </div>
-
-            <div>
-                <p class="text-lg md:text-xl mb-2">
-                    Với thiết kế mộc mạc và đặc trưng bởi tường vàng ngói đỏ âm dương cân bằng, hè mát lành, đông ấm áp. Mỗi không gian là một mảnh ghép tự nhiên không thể tách rời:
-                </p>
-                <p class="eng-text text-base md:text-lg">
-                    With a rustic design characterized by balanced yellow walls and yin-yang red tiles—cool in summer, warm in winter. Each space is an inseparable natural puzzle piece:
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 px-6 bg-section-alt">
-        <div class="max-w-6xl mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-[#FDFAF0] p-8 md:p-10 border border-[#e6c173] rounded-sm text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col h-full">
-                    <svg class="w-12 h-12 mx-auto hoi-an-yellow-text mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
-                    </svg>
-                    <h3 class="text-3xl mb-1 text-[#4A3022]">Nhà Đất – Sự Vững Chãi</h3>
-                    <p class="text-sm italic text-[#B58300] mb-6">Earth House – Solidity</p>
-                    
-                    <img src="earth.jpg" alt="Nhà Đất - Earth House" class="w-full h-56 object-cover rounded-sm mb-6 shadow-sm border border-[#e6c173]">
-                    
-                    <p class="text-[#5c4033] leading-relaxed mb-4 text-justify flex-grow">Màu nâu trầm hòa với sắc xanh, như một cây cao che bóng mát, nơi mang lại cảm giác hiền hòa, an toàn và dễ chịu. Nhà ĐẤT nổi bật với những mảng gạch thủ công được sắp xếp ngẫu nhiên đầy hứng khởi bên cạnh những chiếc xích đu êm ả ru bạn vào giấc mơ trưa, thoang thoảng hương thơm đồng nội.</p>
-                    <div class="border-t border-[#e6c173] pt-4 mt-auto">
-                        <p class="eng-text text-sm text-justify">Deep brown blending with green, like a tall tree providing shade, bringing a gentle, safe, and pleasant feeling. The Earth House stands out with handmade brick patches joyfully arranged at random, next to peaceful swings lulling you into a midday dream, carrying the faint scent of the countryside.</p>
+                <!-- Card: Nhà Đất -->
+                <div onclick="openModal('earth')" class="cursor-pointer bg-[#FDFAF0] p-8 md:p-10 border border-[#e6c173] rounded-sm text-center hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full group">
+                    <svg class="w-12 h-12 mx-auto hoi-an-yellow-text mb-4 transition-transform group-hover:scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>
+                    <h3 class="text-3xl mb-1 text-[#4A3022]">Nhà Đất</h3>
+                    <p class="text-sm italic text-[#B58300] mb-6">Earth House</p>
+                    <div class="overflow-hidden rounded-sm border border-[#e6c173] mb-4">
+                        <img src="earth.jpg" alt="Nhà Đất" class="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-500">
                     </div>
+                    <span class="mt-auto inline-block border-b border-[#e6c173] text-[#4A3022] pb-1 hover:text-[#c98d00]">Xem chi tiết & nhiều hình ảnh &rarr;</span>
                 </div>
 
-                <div class="bg-[#FDFAF0] p-8 md:p-10 border border-[#e6c173] rounded-sm text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col h-full">
-                    <svg class="w-12 h-12 mx-auto hoi-an-yellow-text mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 2.25c-3.16 3.16-7.5 7.74-7.5 12a7.5 7.5 0 1015 0c0-4.26-4.34-8.84-7.5-12z" />
-                    </svg>
-                    <h3 class="text-3xl mb-1 text-[#4A3022]">Nhà Nước – Sự Luân Chuyển</h3>
-                    <p class="text-sm italic text-[#B58300] mb-6">Water House – Flow</p>
-                    
-                    <img src="water.jpg" alt="Nhà Nước - Water House" class="w-full h-56 object-cover rounded-sm mb-6 shadow-sm border border-[#e6c173]">
-                    
-                    <p class="text-[#5c4033] leading-relaxed mb-4 text-justify flex-grow">Ngôi nhà nhỏ ba gian đậm nét Hội An với tone màu xanh dương dịu nhẹ sẽ giúp bạn cảm nhận đầy đủ sự thuần khiết từ bên trong. Vòng tròn luân chuyển ngay giữa căn nhà với những chiếc bàn ghế gỗ nhuốm màu thời gian sẽ kết nối chúng ta về với miền ký ức ngày xưa tươi đẹp.</p>
-                    <div class="border-t border-[#e6c173] pt-4 mt-auto">
-                        <p class="eng-text text-sm text-justify">A small three-compartment house with a distinct Hoi An touch, featuring a gentle blue tone that helps you fully feel the purity from within. The flow circle right in the middle of the house, with wooden tables and chairs steeped in time, connects us back to beautiful memories of the past.</p>
+                <!-- Card: Nhà Nước -->
+                <div onclick="openModal('water')" class="cursor-pointer bg-[#FDFAF0] p-8 md:p-10 border border-[#e6c173] rounded-sm text-center hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full group">
+                    <svg class="w-12 h-12 mx-auto hoi-an-yellow-text mb-4 transition-transform group-hover:scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 2.25c-3.16 3.16-7.5 7.74-7.5 12a7.5 7.5 0 1015 0c0-4.26-4.34-8.84-7.5-12z" /></svg>
+                    <h3 class="text-3xl mb-1 text-[#4A3022]">Nhà Nước</h3>
+                    <p class="text-sm italic text-[#B58300] mb-6">Water House</p>
+                    <div class="overflow-hidden rounded-sm border border-[#e6c173] mb-4">
+                        <img src="water.jpg" alt="Nhà Nước" class="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-500">
                     </div>
+                    <span class="mt-auto inline-block border-b border-[#e6c173] text-[#4A3022] pb-1 hover:text-[#c98d00]">Xem chi tiết & nhiều hình ảnh &rarr;</span>
                 </div>
 
-                <div class="bg-[#FDFAF0] p-8 md:p-10 border border-[#e6c173] rounded-sm text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col h-full">
-                    <svg class="w-12 h-12 mx-auto hoi-an-yellow-text mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.601 8.983 8.983 0 0112 3c-1.23 2.1-2.1 4.54-1.23 7.04.87 2.5 3.32 3.16 4.59 1.17z" />
-                    </svg>
-                    <h3 class="text-3xl mb-1 text-[#4A3022]">Nhà Lửa – Sự Rạng Rỡ</h3>
-                    <p class="text-sm italic text-[#B58300] mb-6">Fire House – Glow</p>
-                    
-                    <img src="fire.jpg" alt="Nhà Lửa - Fire House" class="w-full h-56 object-cover rounded-sm mb-6 shadow-sm border border-[#e6c173]">
-                    
-                    <p class="text-[#5c4033] leading-relaxed mb-4 text-justify flex-grow">Hấp thụ trọn vẹn ánh nắng lấp lánh của dải đất miền Trung qua những đường nét thiết kế xưa và nay, kiến trúc nhà vòm thông suốt từ trên xuống, tràn ngập ánh sáng từ ngoài vào trong là sự nồng nhiệt mà thiên nhiên trao tặng cho căn nhà này, một không gian rực rỡ màu nắng len lỏi với sắc đỏ phố cổ xưa đủ để sưởi ấm và ôm ấp bạn mỗi khi trở về.</p>
-                    <div class="border-t border-[#e6c173] pt-4 mt-auto">
-                        <p class="eng-text text-sm text-justify">Fully absorbing the sparkling sunlight of Central Vietnam through ancient and modern design lines. The domed architecture, open from top to bottom and flooded with light from the outside in, represents the warmth nature bestows upon this house. It's a space radiant with the color of sunshine interwoven with the ancient red of the old town, enough to warm and embrace you every time you return.</p>
+                <!-- Card: Nhà Lửa -->
+                <div onclick="openModal('fire')" class="cursor-pointer bg-[#FDFAF0] p-8 md:p-10 border border-[#e6c173] rounded-sm text-center hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full group">
+                    <svg class="w-12 h-12 mx-auto hoi-an-yellow-text mb-4 transition-transform group-hover:scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.601 8.983 8.983 0 0112 3c-1.23 2.1-2.1 4.54-1.23 7.04.87 2.5 3.32 3.16 4.59 1.17z" /></svg>
+                    <h3 class="text-3xl mb-1 text-[#4A3022]">Nhà Lửa</h3>
+                    <p class="text-sm italic text-[#B58300] mb-6">Fire House</p>
+                    <div class="overflow-hidden rounded-sm border border-[#e6c173] mb-4">
+                        <img src="fire.jpg" alt="Nhà Lửa" class="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-500">
                     </div>
+                    <span class="mt-auto inline-block border-b border-[#e6c173] text-[#4A3022] pb-1 hover:text-[#c98d00]">Xem chi tiết & nhiều hình ảnh &rarr;</span>
                 </div>
 
-                <div class="bg-[#FDFAF0] p-8 md:p-10 border border-[#e6c173] rounded-sm text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col h-full">
-                    <svg class="w-12 h-12 mx-auto hoi-an-yellow-text mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-                    </svg>
-                    <h3 class="text-3xl mb-1 text-[#4A3022]">Nhà Gió – Sự Tự Do</h3>
-                    <p class="text-sm italic text-[#B58300] mb-6">Air House – Freedom</p>
-                    
-                    <img src="air.jpg" alt="Nhà Gió - Air House" class="w-full h-56 object-cover rounded-sm mb-6 shadow-sm border border-[#e6c173]">
-                    
-                    <p class="text-[#5c4033] leading-relaxed mb-4 text-justify flex-grow">Mở rộng tầm mắt trước một cánh đồng thênh thang bất chậm, từ trên cao nhà GIÓ dẫn lối cho bạn bước vào một không gian “như muốn được bay lên” cùng với sự tươi mát và an nhiên đến lạ, nét đẹp của kiến trúc thông tầng ở thập niên 90 ùa về cùng với hệ cửa lá sách đặc trưng làm cho mọi ngóc ngách đều trở nên thông thoáng và đối lưu tuyệt vời.</p>
-                    <div class="border-t border-[#e6c173] pt-4 mt-auto">
-                        <p class="eng-text text-sm text-justify">Opening your eyes to an endless, vast field, from above, the Air house guides you into a space where you "feel like flying," along with a strange freshness and peace. The beauty of the 90s atrium architecture rushes back, combined with the characteristic louvered doors, making every corner airy with excellent air convection.</p>
+                <!-- Card: Nhà Gió -->
+                <div onclick="openModal('air')" class="cursor-pointer bg-[#FDFAF0] p-8 md:p-10 border border-[#e6c173] rounded-sm text-center hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full group">
+                    <svg class="w-12 h-12 mx-auto hoi-an-yellow-text mb-4 transition-transform group-hover:scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" /></svg>
+                    <h3 class="text-3xl mb-1 text-[#4A3022]">Nhà Gió</h3>
+                    <p class="text-sm italic text-[#B58300] mb-6">Air House</p>
+                    <div class="overflow-hidden rounded-sm border border-[#e6c173] mb-4">
+                        <img src="air.jpg" alt="Nhà Gió" class="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-500">
                     </div>
+                    <span class="mt-auto inline-block border-b border-[#e6c173] text-[#4A3022] pb-1 hover:text-[#c98d00]">Xem chi tiết & nhiều hình ảnh &rarr;</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-24 px-6 max-w-6xl mx-auto">
-        <div class="flex flex-col lg:flex-row gap-12 items-center">
-            <div class="w-full space-y-8">
-                <div>
-                    <p class="text-lg md:text-xl leading-loose text-[#5c4033] text-justify md:text-center">
-                        Tại nơi đây, bạn có thể hít hà được hương thơm của đất trời, bạn có thể nghỉ ngơi và thư giãn với đầy đủ tiện nghi, đặc biệt là phần lớn đồ nội thất đều được thiết kế may đo dành riêng cho mỗi căn nhà. Như một đứa con tinh thần, Ồ được chúng mình chăm chút trọn vẹn với tất cả tình yêu thương, rồi nó được lớn lên đủ đầy và căng tròn nhựa sống. Giờ đây, Ồ đã sẵn sàng vươn mình chào đón bạn đến thăm để có thể viết tiếp câu chuyện thanh xuân tươi đẹp này!
-                    </p>
-                    <p class="eng-text text-base md:text-lg text-justify md:text-center mt-3">
-                        Here, you can breathe in the scent of earth and sky, rest and relax with full amenities, especially since most of the furniture is custom-designed for each house. Like a spiritual child, Ồ has been fully nurtured with all our love, growing up whole and full of life. Now, Ồ is ready to reach out and welcome you to visit, so you can continue writing this beautiful story of youth!
-                    </p>
-                </div>
-                
-                <div>
-                    <p class="text-lg md:text-xl leading-loose text-[#5c4033] text-justify md:text-center">
-                        An trú tại một làng quê yên ả. Ồ chỉ cách Phố Cổ Hội An khoảng 10 phút di chuyển – một khoảng cách khá vừa vặn, đủ gần để hòa vào nhịp sống di sản và cũng đủ xa để tĩnh lặng ở vùng ngoại ô xanh biếc.
-                    </p>
-                    <p class="eng-text text-base md:text-lg text-justify md:text-center mt-3">
-                        Nestled in a peaceful countryside village. Ồ is only about a 10-minute drive from Hoi An Ancient Town - a perfect distance, close enough to blend into the heritage rhythm, yet far enough to find tranquility in the green suburbs.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    <!-- AUDIO SECTION -->
     <section class="py-24 px-6 bg-section-alt text-center border-y border-[#e6c173]">
         <div class="max-w-2xl mx-auto">
             <h2 class="text-3xl md:text-4xl mb-2 text-[#4A3022]">Lắng nghe âm thanh của Ồ...</h2>
             <h3 class="text-xl hoi-an-yellow-text italic font-playfair mb-6">Listen to the sound of Ồ...</h3>
-            
             <audio id="ohVillaSong" src="ohvillasong.mp3" loop></audio>
-
             <div class="flex flex-col items-center justify-center space-y-4 my-10">
-                <button id="playBtn" aria-label="Play background music" class="w-24 h-24 hoi-an-yellow text-white rounded-full flex items-center justify-center hover:bg-[#c98d00] transition-all duration-300 shadow-xl hover:scale-105">
-                    <svg id="playIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 translate-x-1">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347c-.75.412-1.667-.13-1.667-.986V5.653z" />
-                    </svg>
-                    <svg id="pauseIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 hidden">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25v13.5m-7.5-13.5v13.5" />
-                    </svg>
+                <button id="playBtn" class="w-24 h-24 hoi-an-yellow text-white rounded-full flex items-center justify-center hover:bg-[#c98d00] transition-all duration-300 shadow-xl hover:scale-105">
+                    <svg id="playIcon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 translate-x-1"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347c-.75.412-1.667-.13-1.667-.986V5.653z" /></svg>
+                    <svg id="pauseIcon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 hidden"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25v13.5m-7.5-13.5v13.5" /></svg>
                 </button>
-                <div class="mt-4">
-                    <p class="text-sm italic hoi-an-yellow-text font-medium">Chạm để phát nhạc</p>
-                    <p class="eng-text text-xs mt-0">Tap to play music</p>
-                </div>
             </div>
         </div>
     </section>
 
+    <!-- FOOTER / CONTACT -->
     <section id="contact" class="py-24 px-6 bg-[#4A3022] text-[#FDFAF0] text-center">
         <h2 class="text-3xl md:text-4xl mb-2 text-[#FDFAF0]">Trở thành người viết tiếp câu chuyện của Ồ</h2>
         <h3 class="text-lg hoi-an-yellow-text italic font-playfair mb-8">Become the one to write the next chapter of Ồ</h3>
-        
         <div class="mb-10 space-y-2">
             <p class="text-lg opacity-90 max-w-lg mx-auto">Bạn đến thăm nhà, hãy gọi cho Thanh Trà Asuka nhé. Cánh cửa của Ồ luôn mở rộng chờ đón. Trân quý và biết ơn!</p>
-            <p class="eng-text text-[#E6A100] max-w-lg mx-auto opacity-70">When you visit, please call Thanh Trà Asuka. Ồ's doors are always open to welcome you. Deeply appreciate and grateful!</p>
         </div>
-        
         <div class="inline-block border-2 border-[#E6A100] bg-[#3e271a] py-6 px-10 rounded-sm mb-16 shadow-xl">
             <p class="text-4xl font-playfair tracking-wider">0706.019.039 <span class="text-2xl opacity-80 font-serif italic ml-2">(Thanh Trà Asuka)</span></p>
         </div>
-        
-        <div class="border-t border-[#6b4735] pt-8 mt-8 space-y-1">
-            <p class="text-sm opacity-70">© 2026 Ồ Villa Hội An. Nơi trao gởi an yên - những tâm hồn đồng điệu.</p>
-            <p class="eng-text text-xs text-[#E6A100] opacity-50">A place to entrust peace - for kindred spirits.</p>
-        </div>
     </section>
 
+    <!-- POPUP MODAL VỚI SLIDER HÌNH ẢNH -->
+    <div id="detailModal" class="fixed inset-0 bg-black/90 z-50 hidden items-center justify-center p-4 md:p-8 transition-opacity duration-300 opacity-0">
+        <!-- Vùng click bên ngoài để đóng -->
+        <div class="absolute inset-0" onclick="closeModal()"></div>
+        
+        <!-- Hộp Modal chính -->
+        <div id="modalContentBox" class="bg-[#FDFAF0] w-full max-w-6xl h-[90vh] md:h-[85vh] flex flex-col md:flex-row overflow-hidden rounded-md relative transform scale-95 transition-transform duration-300 shadow-2xl z-10 border border-[#e6c173]">
+            
+            <!-- Nút Đóng Modal -->
+            <button onclick="closeModal()" class="absolute top-3 right-3 bg-white/80 hover:bg-[#E6A100] text-[#4A3022] hover:text-white rounded-full p-2 transition-colors duration-200 z-50 shadow-md">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+
+            <!-- Cột trái: SLIDER HÌNH ẢNH -->
+            <div class="w-full md:w-3/5 h-64 md:h-full relative bg-black group">
+                <div id="sliderContainer" class="w-full h-full relative">
+                    <!-- Ảnh sẽ được JS bơm vào đây -->
+                </div>
+                
+                <!-- Nút Điều Hướng Slider -->
+                <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/80 text-black p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-sm">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                </button>
+                <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/80 text-black p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-sm">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+
+                <!-- Dấu chấm chỉ báo (Dots) -->
+                <div id="sliderDots" class="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
+                    <!-- Dots sẽ được JS tạo tự động -->
+                </div>
+            </div>
+
+            <!-- Cột phải: NỘI DUNG VĂN BẢN -->
+            <div class="w-full md:w-2/5 p-8 md:p-12 overflow-y-auto bg-[#FDFAF0]">
+                <div id="modalTextBody" class="space-y-6">
+                    <!-- Nội dung Text sẽ được JS bơm vào đây -->
+                </div>
+                
+                <div class="mt-12 text-center md:text-left">
+                    <button onclick="closeModal()" class="px-8 py-3 border-2 border-[#4A3022] text-[#4A3022] rounded-full hover:bg-[#4A3022] hover:text-[#FDFAF0] transition-colors duration-300 font-medium tracking-wide">
+                        &larr; Trở về trang chính
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT GIAO DIỆN -->
     <script>
+        // --- 1. DỮ LIỆU CÁC NGÔI NHÀ VỚI 3 HÌNH ẢNH MỖI NHÀ ---
+        const housesData = {
+            earth: {
+                title: "Nhà Đất",
+                subTitle: "Earth House – Solidity",
+                descVN: "Màu nâu trầm hòa với sắc xanh, như một cây cao che bóng mát, nơi mang lại cảm giác hiền hòa, an toàn và dễ chịu. Nhà ĐẤT nổi bật với những mảng gạch thủ công được sắp xếp ngẫu nhiên đầy hứng khởi bên cạnh những chiếc xích đu êm ả ru bạn vào giấc mơ trưa, thoang thoảng hương thơm đồng nội.",
+                descEN: "Deep brown blending with green, like a tall tree providing shade, bringing a gentle, safe, and pleasant feeling. The Earth House stands out with handmade brick patches joyfully arranged at random, next to peaceful swings lulling you into a midday dream.",
+                images: ["earth.jpg", "earth-2.jpg", "earth-3.jpg"]
+            },
+            water: {
+                title: "Nhà Nước",
+                subTitle: "Water House – Flow",
+                descVN: "Ngôi nhà nhỏ ba gian đậm nét Hội An với tone màu xanh dương dịu nhẹ sẽ giúp bạn cảm nhận đầy đủ sự thuần khiết từ bên trong. Vòng tròn luân chuyển ngay giữa căn nhà với những chiếc bàn ghế gỗ nhuốm màu thời gian sẽ kết nối chúng ta về với miền ký ức ngày xưa tươi đẹp.",
+                descEN: "A small three-compartment house with a distinct Hoi An touch, featuring a gentle blue tone that helps you fully feel the purity from within. The flow circle right in the middle of the house connects us back to beautiful memories of the past.",
+                images: ["water.jpg", "water-2.jpg", "water-3.jpg"]
+            },
+            fire: {
+                title: "Nhà Lửa",
+                subTitle: "Fire House – Glow",
+                descVN: "Hấp thụ trọn vẹn ánh nắng lấp lánh của dải đất miền Trung qua những đường nét thiết kế xưa và nay, kiến trúc nhà vòm thông suốt từ trên xuống, tràn ngập ánh sáng từ ngoài vào trong là sự nồng nhiệt mà thiên nhiên trao tặng cho căn nhà này, một không gian rực rỡ màu nắng len lỏi với sắc đỏ phố cổ xưa đủ để sưởi ấm và ôm ấp bạn mỗi khi trở về.",
+                descEN: "Fully absorbing the sparkling sunlight of Central Vietnam through ancient and modern design lines. The domed architecture, open from top to bottom and flooded with light from the outside in...",
+                images: ["fire.jpg", "fire-2.jpg", "fire-3.jpg"]
+            },
+            air: {
+                title: "Nhà Gió",
+                subTitle: "Air House – Freedom",
+                descVN: "Mở rộng tầm mắt trước một cánh đồng thênh thang bất chậm, từ trên cao nhà GIÓ dẫn lối cho bạn bước vào một không gian “như muốn được bay lên” cùng với sự tươi mát và an nhiên đến lạ, nét đẹp của kiến trúc thông tầng ở thập niên 90 ùa về cùng với hệ cửa lá sách đặc trưng làm cho mọi ngóc ngách đều trở nên thông thoáng và đối lưu tuyệt vời.",
+                descEN: "Opening your eyes to an endless, vast field, from above, the Air house guides you into a space where you 'feel like flying,' along with a strange freshness and peace...",
+                images: ["air.jpg", "air-2.jpg", "air-3.jpg"]
+            }
+        };
+
+        // --- 2. LOGIC MODAL & SLIDER ---
+        const detailModal = document.getElementById('detailModal');
+        const modalContentBox = document.getElementById('modalContentBox');
+        const sliderContainer = document.getElementById('sliderContainer');
+        const sliderDots = document.getElementById('sliderDots');
+        const modalTextBody = document.getElementById('modalTextBody');
+        
+        let currentImageIndex = 0;
+        let currentImagesArray = [];
+
+        function openModal(houseKey) {
+            const data = housesData[houseKey];
+            currentImagesArray = data.images;
+            currentImageIndex = 0;
+
+            // Bơm Nội dung Text
+            modalTextBody.innerHTML = `
+                <h2 class="text-4xl md:text-5xl text-[#4A3022] font-playfair mb-1">${data.title}</h2>
+                <h3 class="text-lg text-[#E6A100] italic font-playfair mb-8">${data.subTitle}</h3>
+                
+                <p class="text-lg text-[#5c4033] leading-relaxed text-justify">${data.descVN}</p>
+                <div class="border-t border-[#e6c173] pt-6 mt-6">
+                    <p class="eng-text text-base text-justify">${data.descEN}</p>
+                </div>
+            `;
+
+            // Bơm Hình ảnh vào Slider
+            sliderContainer.innerHTML = '';
+            sliderDots.innerHTML = '';
+            
+            currentImagesArray.forEach((imgSrc, index) => {
+                // Tạo ảnh
+                const imgEl = document.createElement('img');
+                imgEl.src = imgSrc;
+                imgEl.className = `slide w-full h-full object-cover absolute top-0 left-0 ${index === 0 ? 'active' : ''}`;
+                sliderContainer.appendChild(imgEl);
+
+                // Tạo dấu chấm (dot)
+                const dot = document.createElement('button');
+                dot.className = `w-2 h-2 rounded-full transition-all ${index === 0 ? 'bg-white scale-125' : 'bg-white/50'}`;
+                dot.onclick = () => goToSlide(index);
+                sliderDots.appendChild(dot);
+            });
+
+            // Hiển thị Modal
+            document.body.classList.add('modal-open');
+            detailModal.classList.remove('hidden');
+            detailModal.classList.add('flex');
+            setTimeout(() => {
+                detailModal.classList.remove('opacity-0');
+                modalContentBox.classList.add('modal-content-show');
+            }, 10);
+        }
+
+        function closeModal() {
+            detailModal.classList.add('opacity-0');
+            modalContentBox.classList.remove('modal-content-show');
+            setTimeout(() => {
+                detailModal.classList.add('hidden');
+                detailModal.classList.remove('flex');
+                document.body.classList.remove('modal-open');
+            }, 300);
+        }
+
+        // --- 3. LOGIC CHUYỂN ẢNH (SLIDER) ---
+        function updateSlider() {
+            const slides = sliderContainer.querySelectorAll('.slide');
+            const dots = sliderDots.querySelectorAll('button');
+            
+            slides.forEach((slide, index) => {
+                slide.classList.remove('active');
+                dots[index].className = 'w-2 h-2 rounded-full transition-all bg-white/50';
+                if (index === currentImageIndex) {
+                    slide.classList.add('active');
+                    dots[index].className = 'w-2 h-2 rounded-full transition-all bg-white scale-125';
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentImageIndex = (currentImageIndex + 1) % currentImagesArray.length;
+            updateSlider();
+        }
+
+        function prevSlide() {
+            currentImageIndex = (currentImageIndex - 1 + currentImagesArray.length) % currentImagesArray.length;
+            updateSlider();
+        }
+
+        function goToSlide(index) {
+            currentImageIndex = index;
+            updateSlider();
+        }
+
+        // --- 4. LOGIC NHẠC NỀN ---
         const audio = document.getElementById('ohVillaSong');
         const playBtn = document.getElementById('playBtn');
         const playIcon = document.getElementById('playIcon');
